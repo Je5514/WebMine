@@ -1,0 +1,32 @@
+.wrg.story {
+    background-color: #f9f9f9;
+    padding: rem(50) 0;
+    @media #{$lg} {
+        padding: rem(90) 0;
+    }
+    h2 {
+        @include font-size(30px, 36px);
+    }
+    &--red {
+        background-color: #f1f1f1;
+    }
+    &--pink {
+        background-color: #f6f6f6;
+    }
+    a {
+        color: #252525;
+    }
+    .story__step {
+        padding-bottom: 60px;
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+    code {
+        color: rgb(250, 250, 250);
+        padding: 12px;
+        display: block;
+        background: #252525;
+        border-radius: rem(8);
+    }
+}
