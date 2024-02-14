@@ -1,0 +1,20 @@
+.wm.form{
+    input{
+        background: transparent;
+        height: rem(40);
+        border: rem(1) solid #fff;
+        border-radius: rem(3);
+        padding: rem(10) rem(24);
+        &::placeholder{
+            color: #fff;
+        }
+    }
+    label{
+        margin-bottom: rem(10);
+        display: inline-block;
+    }
+    .form__wrapper{
+        display: flex;
+        align-items: center;
+    }
+}

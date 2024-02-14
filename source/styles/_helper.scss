@@ -5,29 +5,61 @@ ul, ol {
 		list-style: none;
 	}
 }
-// p {
-// 	@include font-size(16px, 18px);
-// 	margin:0 0 rem(20);
-// 	&:last-of-type {
-// 		margin: 0;
-// 	}
-// 	&:empty {
-// 		display:none;
-// 	}
-// }
-// h1, h2, h3, h4, h5, h6 {
-// 	margin: 0 0 rem(20);
-// }
-// a {
-// 	&:active {
-
-// 	}
-// 	&:hover {
-
-// 	}
-// }
+p {
+	@include font-size(16px, 18px);
+	margin:0 0 rem(20);
+	@media #{$lg}{
+		@include font-size(18px, 26px);
+	}
+	&:last-of-type {
+		margin: 0;
+	}
+	&:empty {
+		display:none;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 rem(20);
+}
+.l-title{
+	@include font-size(20px, 26px);
+	@media #{$lg}{
+		@include font-size(26px, 30px);
+	}
+}
+a {
+	@include font-size(18px, 24px);
+	font-weight: 700;
+	color: #4586ff;
+	text-decoration: none;
+	transition: 0.3s ease-in-out;
+	&:hover {
+		color: #fff;
+	}
+}
 img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+.is-mobile{
+	@media #{$lg}{
+		display: none;
+	}
+}
+.is-desktop{
+	display: none;
+	@media #{$lg}{
+		display: block;
+	}
+}
+.l-btn{
+	display: inline-block;
+	background-color: #eda405;
+	padding: rem(7.2) rem(10);
+	color:#fff;
+	border: rem(1) solid #fff;
+	&:hover{
+		opacity: 0.8;
+	}
 }

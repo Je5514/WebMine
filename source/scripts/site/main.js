@@ -21,79 +21,72 @@ if((navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 0) || naviga
     $('body').removeClass('mobile').removeClass('desktop').addClass('ipad');
 }
 
-// Site related functions
+// Menu burger
+function menuBurger(){
+  if($('.header__burger').length >0){
+    $('.jsBurger').on('click', function(){
+      $(this).toggleClass('is-open');
+      $('nav').toggleClass('is-open');
+    })
+  }
+}
 
-//define a function 
-function example_function() { 
-    console.log("function called") 
-} 
-
-//call the function 
-example_function();
-
-//menu toggle
-window.addEventListener("DOMContentLoaded", (event) => {
-  const navToggle= document.querySelector('#Toggle');
-  const nav = document.querySelector('.menu-items');
-  navToggle.addEventListener("click",()=>{
-      nav.classList.toggle('menu-open')
+function bannerSlider(){
+  $('.jsSlider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
   });
-});
+}
 
-window.addEventListener("DOMContentLoaded", (event) => {
-const navShop = document.querySelector('#shopbar');
-navShop.addEventListener("click", () => {
-    alert("You have no items in your shopping cart. Please add cart");
-});
-});
-
-//back to top button
-window.onscroll = function() {
-    scrollFunction();
-  };
-  
-  function scrollFunction() {
-    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      scrollToTopBtn.style.display = "block";
-    } else {
-      scrollToTopBtn.style.display = "none";
+function ellipsis(){
+  $('.ellipsis').each(function() {
+    var $ellipsis = $(this);
+    var $parent = $ellipsis.parent();
+    var $clone = $ellipsis.clone().css({display: 'inline', width: 'auto', visibility: 'hidden'}).appendTo('body');
+    if ($clone.height() > $parent.height()) {
+        $ellipsis.addClass('ellipsis-active');
     }
-    // const blur = document.getElementById('video');
-    
-  }
-  
-  function scrollToTop() {
-     window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
+    $clone.remove();
+  });
+}
 
-  //show password
-  function mypassword() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  }
+menuBurger();
+bannerSlider();
+ellipsis();
 
-  $(document).ready(function() {
-    $(window).scroll(function() {
-      var scrollPosition = $(this).scrollTop();
-      var video = $('#background-video');
-  
-      if (scrollPosition > 0) {
-        video.addClass('video--blur');
+function applyEllipsis() {
+  $('.ellipsis').each(function() {
+      var $ellipsis = $(this);
+      var $parent = $ellipsis.parent();
+
+      // Reset paragraph's height to auto to get its actual height
+      $ellipsis.css('height', 'auto');
+
+      // Check if the paragraph's height exceeds the parent's height
+      if ($ellipsis.height() > $parent.height()) {
+          $ellipsis.addClass('ellipsis-active');
       } else {
-        video.removeClass('video--blur');
+          $ellipsis.removeClass('ellipsis-active');
       }
-    });
-  });
 
+      // Reset paragraph's height to prevent unexpected layout changes
+      $ellipsis.css('height', '');
+  });
+}
+
+$(document).ready(function() {
+  applyEllipsis(); // Call the function when the document is ready
+
+  $(window).on('resize', function() {
+      applyEllipsis(); // Call the function when the window is resized
+  });
+});
 
   
   

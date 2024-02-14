@@ -3,7 +3,13 @@ block variables
 	-var active = 'Home'
 	-var bodyClass = 'theme--default'
 block story
-	section.section_banner 
-		include ../components/story/story--pink.pug
-
+	section.section.section--banner
+		.container 
+			include ../components/banner/banner.pug
+	section.section.section--popular
+		.container 
+			h2.l-title  The most popular
+			include ../components/card-item/card-item.pug 
+	section.section.section--footer-block 
+		include ../components/footer-block/footer-block.pug
 	

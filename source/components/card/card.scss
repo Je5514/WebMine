@@ -1,0 +1,42 @@
+.wm.card{
+    max-width: rem(300);
+    position: relative;
+    &:hover{
+        article{
+            opacity: 1;
+        }
+    }
+    article{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        color: #000;
+        padding: rem(20);
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        overflow: hidden;
+        cursor: pointer;
+        h2{
+            text-transform: uppercase;
+        }
+    }
+}
+.ellipsis-active {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.ellipsis {
+    overflow: hidden;
+    position: relative;
+    &::after{
+        content: '\2026'; /* Unicode character for ellipsis */
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #fff; /* Adjust as needed */
+        padding: 0 0.5em; /* Adjust as needed */
+    }
+}

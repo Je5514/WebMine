@@ -1,0 +1,63 @@
+.wm.banner{
+    img{
+        height: rem(500);
+        object-fit: cover;
+        @media #{$lg}{
+            height: rem(700);
+            width: 100%;
+        }
+    }
+    .banner__slider{
+        li{
+            position: relative;
+        }
+    }
+    .banner__box{
+        background:#000;
+        position: absolute;
+        width: 100%;
+        height: rem(100);
+        right: 0;
+        bottom: 0;
+        padding: rem(20);
+        box-shadow: 0 rem(3) rem(10) rem(5) #000000;
+        border-radius: rem(8);
+        @media #{$lg}{
+            width: rem(500);
+        }
+        h2{
+            font-size: rem(30);
+            // color: #eda405;
+            @media #{$lg}{
+                font-size: rem(50);
+            }
+        }
+    }
+    // .slick-dots{
+    //     position: absolute;
+    //     bottom: rem(34);
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     display: flex;
+    //     align-items: center;
+    //     li{
+    //         &:not(:last-of-type){
+    //             padding-right: rem(20);
+    //         }
+    //     }
+    //     button{
+    //         font-size: 0;
+    //         border: rem(2) solid #eda405;
+    //         width: rem(20);
+    //         height: rem(20);
+    //         border-radius: 50%;
+    //         background-color: #eda405;
+    //         cursor: pointer;
+    //     }
+    //     .slick-active{
+    //         button{
+    //             background-color: #05ed0c;
+    //         }
+    //     }
+    // }
+}

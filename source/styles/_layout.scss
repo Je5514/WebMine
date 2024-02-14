@@ -1,8 +1,25 @@
 .container {
-  max-width: 800px;
+  max-width: rem(1300);
   margin: 0 auto;
-  padding: 0 rem(15);
+  padding: 0 rem(20);
   &--lg {
   
+  }
+}
+.section{
+  padding: rem(40) 0;
+  @media #{$lg}{
+    padding: rem(80) 0;
+  }
+  &:first-of-type{
+    padding-top: 0;
+  }
+  &--popular{
+    h2{
+      text-align: center;
+    }
+  }
+  &--footer-block{
+    padding-bottom: 0;
   }
 }
