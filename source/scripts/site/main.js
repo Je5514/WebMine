@@ -40,8 +40,10 @@ function bannerSlider(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1500,
-    arrows: false,
-    easing: 'linear'
+    easing: 'linear',
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/next.svg" alt="prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/next.svg" alt="prev"></button>',
   });
 }
 

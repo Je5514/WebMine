@@ -61,4 +61,38 @@
     //         }
     //     }
     // }
+    .slick-arrow{
+        position: absolute;
+        top: 45%;
+        // transform: translateY(-50%);
+        width: rem(40);
+        height: rem(40);
+        font-size: 0;
+        z-index: 1;
+        background-color: transparent;
+        border: none;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            background-color: #4586ff;
+        }
+        img{
+            width: auto;
+            height: auto;
+        }
+    }
+    .slick-next{
+        right: rem(10);
+        @media #{$xxl}{
+            right: rem(-60);
+        }
+    } 
+    .slick-prev{
+        left: rem(10);
+        transform: rotate(180deg);
+        @media #{$xxl}{
+            left: rem(-60);
+        }
+    }
 }

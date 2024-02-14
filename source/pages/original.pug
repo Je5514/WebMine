@@ -1,0 +1,8 @@
+extend ../pagelayout/home
+block variables
+    -var active = 'Originals'
+    -var bodyClass = 'theme--default'
+block story
+    section.section.section--cards 
+        .container 
+            include ../components/card-list/card-list.pug

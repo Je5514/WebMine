@@ -1,0 +1,9 @@
+.wm.card-list{
+   ul{
+        display: flex;
+        gap: rem(50);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+   }
+}
