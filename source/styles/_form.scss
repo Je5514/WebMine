@@ -5,8 +5,13 @@
         border: rem(1) solid #fff;
         border-radius: rem(3);
         padding: rem(10) rem(24);
+        outline: none;
+        font-size: rem(18);
         &::placeholder{
             color: #fff;
+        }
+        &:focus{
+            background-color:rgb(110, 110, 246);
         }
     }
     label{

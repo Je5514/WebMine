@@ -17,11 +17,12 @@
         position: absolute;
         width: 100%;
         height: rem(100);
-        right: 0;
+        right: rem(1);
         bottom: 0;
         padding: rem(20);
-        box-shadow: 0 rem(3) rem(10) rem(5) #000000;
-        border-radius: rem(8);
+        // box-shadow: 0 rem(3) rem(10) rem(5) #000000;
+        // border-radius: rem(8);
+        border: rem(1) solid #fff;
         @media #{$lg}{
             width: rem(500);
         }

@@ -1,0 +1,16 @@
+.wm.popular{
+    header{
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        margin-bottom: rem(30);
+        h2{
+            font-size: rem(30);
+            margin-bottom: 0;
+            padding-left: rem(20);
+        }
+        img{
+            max-width: rem(50);
+        }
+    }
+}

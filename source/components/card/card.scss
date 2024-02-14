@@ -23,20 +23,11 @@
             text-transform: uppercase;
         }
     }
-}
-.ellipsis-active {
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.ellipsis {
-    overflow: hidden;
-    position: relative;
-    &::after{
-        content: '\2026'; /* Unicode character for ellipsis */
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background-color: #fff; /* Adjust as needed */
-        padding: 0 0.5em; /* Adjust as needed */
+    figure{
+        img{
+            max-width: rem(250);
+            min-height: rem(250);
+            object-fit: cover;
+        }
     }
 }

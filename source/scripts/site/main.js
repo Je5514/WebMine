@@ -35,58 +35,18 @@ function bannerSlider(){
   $('.jsSlider').slick({
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1500,
     arrows: false,
-  });
-}
-
-function ellipsis(){
-  $('.ellipsis').each(function() {
-    var $ellipsis = $(this);
-    var $parent = $ellipsis.parent();
-    var $clone = $ellipsis.clone().css({display: 'inline', width: 'auto', visibility: 'hidden'}).appendTo('body');
-    if ($clone.height() > $parent.height()) {
-        $ellipsis.addClass('ellipsis-active');
-    }
-    $clone.remove();
+    easing: 'linear'
   });
 }
 
 menuBurger();
 bannerSlider();
-ellipsis();
-
-function applyEllipsis() {
-  $('.ellipsis').each(function() {
-      var $ellipsis = $(this);
-      var $parent = $ellipsis.parent();
-
-      // Reset paragraph's height to auto to get its actual height
-      $ellipsis.css('height', 'auto');
-
-      // Check if the paragraph's height exceeds the parent's height
-      if ($ellipsis.height() > $parent.height()) {
-          $ellipsis.addClass('ellipsis-active');
-      } else {
-          $ellipsis.removeClass('ellipsis-active');
-      }
-
-      // Reset paragraph's height to prevent unexpected layout changes
-      $ellipsis.css('height', '');
-  });
-}
-
-$(document).ready(function() {
-  applyEllipsis(); // Call the function when the document is ready
-
-  $(window).on('resize', function() {
-      applyEllipsis(); // Call the function when the window is resized
-  });
-});
 
   
   

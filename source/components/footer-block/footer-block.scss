@@ -42,6 +42,7 @@
             flex-basis: 50%;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
     }
     .footer-block__download{
@@ -65,15 +66,27 @@
     .form{
         max-width: rem(400);
         padding: rem(20) rem(10);
-        @media #{$lg}{
-            padding-left: rem(40);
-        }
+        position: relative;
+        z-index: 1;
         label{
             font-size: rem(24);
             font-weight: 800;
         }
         input{
             border-radius: rem(3) 0 0 rem(3);
+        }
+    }
+    .footer__person{
+        position: absolute;
+        right: 0;
+        top: rem(-120);
+        z-index: 0;
+        max-width: rem(200);
+        @media #{$xl}{
+            max-width: rem(250);
+        }
+        @media #{$xxl}{
+            max-width: rem(300);
         }
     }
 }
