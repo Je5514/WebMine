@@ -1,6 +1,17 @@
 .wm.card 
     figure  
         img(src=cardImg alt='image')
+        figcaption 
+            h3= cardHeading 
+            .card__love
+                <svg fill="#4586ff" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"/></svg>
+                span= cardNumber
     article 
         h2.l-title= cardHeading
         p= cardContent
+        a(href='' title='').card__arrow
+            span Read More
+            i
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
