@@ -1,0 +1,40 @@
+.wm.episode{
+    border-bottom: rem(1) solid #ffff;   
+    position: relative;
+    padding: rem(20) 0;
+    figure{
+        width: rem(80);
+        height: rem(80);
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            transition: 0.3s ease-in-out;
+            max-width: rem(80);
+            min-height: rem(80);
+        }
+    }
+    a{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        &:hover + .episode__wrapper  {
+            figure img{
+                transform: scale(1.2);
+            }
+            P{
+                color: #4586ff;
+            }
+        }
+    }
+    .episode__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    p{
+        padding-left: rem(30);
+        font-size: rem(20);
+    }
+}

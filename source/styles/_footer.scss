@@ -20,9 +20,14 @@
 		a{
 			&:hover{
 				img{
-					transform: scale(0.9);
+					transform: scale(1.2);
 				}
 			}
+		}
+		figure{
+			width: rem(60);
+			height: rem(60);
+			overflow: hidden;
 		}
 	}
 	.footer__col{

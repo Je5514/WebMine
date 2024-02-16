@@ -1,0 +1,25 @@
+.wm.detail 
+    figure.detail__bg
+        img(src='images/boo-bg.jpg' alt='background image')
+    .container
+        .detail__wrapper
+            .detail__aside
+                h2 My Boo
+                p When you have an invisible roommate.
+            .detail__episode
+                -var episodeImg= 'images/boo.jpg'
+                -var episodeNum= 'Episode 1'
+                -var episodeLink= 'https://www.webtoons.com/en/supernatural/my-boo/ep-1/viewer?title_no=1185&episode_no=1'
+                include ../episode/episode.pug
+                -var episodeNum= 'Episode 2'
+                -var episodeLink= 'https://www.webtoons.com/en/supernatural/my-boo/ep-2/viewer?title_no=1185&episode_no=2'
+                include ../episode/episode.pug
+                -var episodeNum= 'Episode 3'
+                -var episodeLink= 'https://www.webtoons.com/en/supernatural/my-boo/ep-3/viewer?title_no=1185&episode_no=3'
+                include ../episode/episode.pug
+                -var episodeNum= 'Episode 4'
+                -var episodeLink= 'https://www.webtoons.com/en/supernatural/my-boo/ep-4/viewer?title_no=1185&episode_no=4'
+                include ../episode/episode.pug
+                -var episodeNum= 'Episode 5'
+                -var episodeLink= 'https://www.webtoons.com/en/supernatural/my-boo/ep-5/viewer?title_no=1185&episode_no=5'
+                include ../episode/episode.pug

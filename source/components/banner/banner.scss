@@ -84,14 +84,14 @@
     }
     .slick-next{
         right: rem(10);
-        @media #{$xxl}{
+        @media #{$xxxl}{
             right: rem(-60);
         }
     } 
     .slick-prev{
         left: rem(10);
         transform: rotate(180deg);
-        @media #{$xxl}{
+        @media #{$xxxl}{
             left: rem(-60);
         }
     }

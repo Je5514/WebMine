@@ -14,7 +14,7 @@
 		position: relative;
 		z-index: 3;
 		img{
-			width: rem(80);
+			width: rem(60);
 			height: auto;
 			transition: 0.3s ease-in-out;
 		}
@@ -23,7 +23,7 @@
 			align-items: center;
 			&:hover{
 				img{
-					transform: scale(0.9);
+					transform: scale(1.2);
 				}
 				span{
 					color: #4586ff;
@@ -37,6 +37,11 @@
 			span{
 				color: #fff;
 			}
+		}
+		figure{
+			width: rem(60);
+			height: rem(60);
+			overflow: hidden;
 		}
 	}
 	nav{
